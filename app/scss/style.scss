@@ -24,8 +24,6 @@
     right: 80px;
     bottom: 116px;
     text-align: right;
-    color:#fff;
-    text-transform: uppercase;
 }
 
 .slidre-item__info-suptitle {
@@ -92,6 +90,7 @@
     &__name {
         font-weight: 300;
         line-height: 19px;
+        text-transform: capitalize;
     }
 }
 
@@ -103,15 +102,12 @@
     border-right: 1px solid rgba(#fff, .25);
     height: 100vh;
     text-align: center;
-    color: #fff;
 }
 
 .header-title {
     font-weight: 800;
     font-size: 200px;
     line-height: 156px;
-    text-transform: uppercase;
-    color: #FFFFFF;
     opacity: 0.07;
     max-width: 460px;
     z-index: 4;
@@ -123,7 +119,6 @@
 .menu {
     margin-top: 40px;
     a {
-        color: #fff;
         span {
             display: block;
             font-size: 12px;
@@ -132,6 +127,7 @@
             padding-top: 6px;
             font-weight: 500;
             margin-bottom: 37px;
+            text-transform: capitalize;
             }
         }
     
@@ -160,6 +156,7 @@
 
 .header__location {
     display: inline-block;
+    text-transform: capitalize;
     font-weight: 300;
     font-size: 12px;
     line-height: 14px;
@@ -191,7 +188,59 @@
     z-index: 3;
 }
 
+.line-animation {
+    stroke-dashoffset: 600;
+    stroke-dasharray: 600;
+    animation: animdash 3s infinite 6s;
+}
 
+@keyframes animdash {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+.serf {
+    padding: 160px 0 210px;
+    background-image: url(../img/bg-map-loc.png);
+    background-repeat: no-repeat;
+    background-position: right 200px;
+    background-size: auto;
+}
+
+.serf__subtitle {
+    text-align: right;
+    padding-right: 80px;
+    margin-top: -85px;
+}
+
+.serf__slider {
+    padding-top: 110px;
+    .slider-arrows {
+        top:50px;
+        opacity: .5;
+    }
+}
+
+.serf__box {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &-inner {
+        min-height: 750px;
+        background-color: rgba(#000, .85);
+    }
+}
+
+.serf__box-title {
+
+}
+
+.serf__box-locatoin {
+    
+}
 
 
 

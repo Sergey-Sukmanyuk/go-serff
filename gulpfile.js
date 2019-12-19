@@ -13,7 +13,7 @@ return gulp.src('app/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(rename({suffix: '.min'}))
     .pipe(autoprefixer({
-        overrideBrowserslist:['last 8 version']
+        overrideBrowserslist:['last 10 version']
     }))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({stream: true}))
