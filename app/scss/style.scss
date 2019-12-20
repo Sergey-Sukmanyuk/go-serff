@@ -203,7 +203,7 @@
 
 
 .serf {
-    padding: 160px 0 210px;
+    padding: 160px 0 120px;
     background-image: url(../img/bg-map-loc.png);
     background-repeat: no-repeat;
     background-position: right 200px;
@@ -224,23 +224,80 @@
     }
 }
 
+.slick-slide:nth-child(4n+1) {
+    .serf__box {
+margin-top: 32px;
+    }
+}
+
+.slick-slide:nth-child(4n+3) {
+    .serf__box {
+    margin-top: 89px;
+    }
+}
+
 .serf__box {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+    transition: all .5s;
     &-inner {
         min-height: 750px;
         background-color: rgba(#000, .85);
     }
+    &:hover {
+        .serf__box-btn {
+            display: block;
+        }
+        .serf__box-inner {
+            background-color: rgba(#000, .3);
+        }
+    }
 }
 
 .serf__box-title {
-
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 36px;
+    padding: 72px 0 0 40px;
+    width: 140px;
 }
 
 .serf__box-locatoin {
-    
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 8px;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 40px;
+    bottom: 80px;
+    width: 0;
+    height: 0;
+    white-space: nowrap;
 }
+
+.slick-current {
+    .serf__box-btn {
+        display: block;
+    }
+    .serf__box-inner {
+        background-color: rgba(#000, .3);
+    }
+}
+
+.serf__box-btn {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+text-align: center;
+display: none;
+}
+
+
+
+
 
 
 
