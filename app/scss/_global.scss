@@ -26,7 +26,7 @@ a {
 .container {
     max-width: 1920px;
     margin: 0 auto;
-    
+
 }
 
 ul,
@@ -46,7 +46,7 @@ li {
     display: inline-block;
 
     &::before {
-        content:" ";
+        content: " ";
         width: 80px;
         height: 1px;
         background-color: #fff;
@@ -56,9 +56,29 @@ li {
     }
 }
 
+.headline-right {
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 7.33333px;
+    opacity: 0.5;
+    padding-right: 103px;
+    position: relative;
+    display: inline-block;
+
+    &::before {
+        content: " ";
+        width: 80px;
+        height: 1px;
+        background-color: #fff;
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
+}
+
 .title {
 
-    span{
+    span {
         font-weight: 800;
         font-size: 200px;
         color: rgba(#fff, .2);
@@ -66,32 +86,50 @@ li {
         transform: translateX(-50px);
         display: inline-block;
     }
+
     h3 {
         position: absolute;
-        top:0;
+        top: 0;
         right: -20px;
         margin: 0;
         color: #fff;
         font-size: 80px;
+
         &::after {
             content: "";
             position: absolute;
             top: 0;
             right: 0;
-         width: 80px;
-         height: 1px;
-         background-color: $green;
+            width: 80px;
+            height: 1px;
+            background-color: $green;
         }
     }
 }
 
 .subtitle {
-display: inline-block;
-text-align: right;
+    display: inline-block;
+    text-align: right;
+
     &__header {
         font-weight: 800;
         font-size: 40px;
         padding-right: 10px;
+
+        span {
+            font-weight: 100;
+        }
+    }
+}
+
+.descr {
+    display: inline-block;
+    padding-left: 5px;
+
+    &__header {
+        font-weight: 800;
+        font-size: 40px;
+
         span {
             font-weight: 100;
         }
@@ -102,14 +140,16 @@ text-align: right;
     font-weight: 800;
     font-size: 40px;
     line-height: 36px;
-    span{
+
+    span {
         padding: 17px 57px 15px 17px;
         background-color: $green;
         display: inline-block;
         margin-left: 19px;
         position: relative;
-        &::before{
-            content:"";
+
+        &::before {
+            content: "";
             position: absolute;
             width: 20px;
             height: 1px;
@@ -117,8 +157,9 @@ text-align: right;
             top: 50%;
             left: -10px;
         }
-        &::after{
-            content:"";
+
+        &::after {
+            content: "";
             position: absolute;
             top: 50%;
             right: 17px;
@@ -128,5 +169,14 @@ text-align: right;
             transform: translateY(-50%);
         }
     }
-    
+
+}
+
+.surf,
+.travel {
+    padding: 160px 0 120px;
+}
+
+.travel {
+    padding-bottom: 160px;
 }
