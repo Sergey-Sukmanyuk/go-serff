@@ -185,21 +185,19 @@ li {
 
 .quantity {
     display: inline-block;
-  }
-  
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button
-  {
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-  }
-  
-  input[type=number]
-  {
+}
+
+input[type=number] {
     -moz-appearance: textfield;
-  }
-  
-  .quantity input {
+}
+
+.quantity input {
     width: 45px;
     height: 42px;
     display: block;
@@ -209,19 +207,19 @@ li {
     font-size: 40px;
     line-height: 36px;
     color: #fff;
-  }
-  
-  .quantity input:focus {
+}
+
+.quantity input:focus {
     outline: 0;
-  }
-  
-  .quantity-nav {
+}
+
+.quantity-nav {
     float: left;
     position: static;
     height: 42px;
-  }
-  
-  .quantity-button {
+}
+
+.quantity-button {
     position: relative;
     cursor: pointer;
     width: 20px;
@@ -230,14 +228,24 @@ li {
     justify-content: center;
     align-items: center;
     top: 45px;
-  }
-  
-  .quantity-button.quantity-up {
+}
+
+.quantity-button.quantity-up {
     position: absolute;
     right: 0px;
-  }
-  
-  .quantity-button.quantity-down {
+}
+
+.quantity-button.quantity-down {
     position: absolute;
     right: 25px;
-  }
+}
+
+.star-list {
+    li {
+        display: inline-block;
+
+        &+li {
+            margin-left: -25px;
+        }
+    }
+}
