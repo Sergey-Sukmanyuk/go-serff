@@ -119,6 +119,32 @@
     left: 0;
 }
 
+.menu__btn {
+    display: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 75px;
+    z-index: 6;
+    //display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    background-color: rgba(#fff, .25);
+    &-inner {
+        width: 40px;
+    }
+    &-line {
+        height: 5px;
+        background-color:$green;
+        +.menu__btn-line {
+            margin-top: 5px;
+        }
+    }
+}
+
 .menu {
     margin-top: 40px;
 
