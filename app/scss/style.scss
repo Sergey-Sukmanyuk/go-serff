@@ -269,26 +269,33 @@
 }
 
 .surf__box {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    transition: all .5s;
+    &-wrapper{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        &:hover {
+            .surf__box-btn {
+                display: block;
+            }
+    
+            .surf__box-inner {
+                background-color: rgba(#000, .3);
+            }
+        }
+
+    }
+   
 
     &-inner {
         min-height: 750px;
         background-color: rgba(#000, .85);
+        position: relative;
+        transition: all .5s;
+       
     }
+   
 
-    &:hover {
-        .surf__box-btn {
-            display: block;
-        }
 
-        .surf__box-inner {
-            background-color: rgba(#000, .3);
-        }
-    }
 }
 
 .surf__box-title {
@@ -342,6 +349,7 @@
 
     .slick-list {
         min-height: 635px;
+        overflow: visible;
     }
 
     .slick-current {
@@ -415,6 +423,7 @@
     height: 23px;
     border-radius: 50%;
     background-color: $green;
+    box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
 }
 
 .slider-dots {
@@ -438,7 +447,7 @@
         border-left: 12px solid transparent;
         border-right: 12px solid transparent;
         bottom: -21px;
-        left: 50%;
+        left: calc(50% - .5px);
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
@@ -453,7 +462,7 @@
         z-index: 5;
 
         &::before {
-            left: 0;
+            left: -0.5px;
         }
     }
 
@@ -514,7 +523,7 @@
 
         &::before {
             left: auto;
-            right: 0;
+            right:0.5px;
 
         }
     }
@@ -708,6 +717,7 @@ margin-bottom: 47px;
         .shop-extras-title {
             font-size: 18px;
             line-height: 22px;
+            text-align: center;
             letter-spacing: 8px;
             font-weight: 300;
             opacity: 0.5;
